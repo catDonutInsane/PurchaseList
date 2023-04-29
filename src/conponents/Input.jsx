@@ -25,7 +25,8 @@ export const Input=(props)=>{
     return(
         <div className={style.main}>
         <div className={style.wrapper}>
-            <input onChange={(e)=>{
+            <input 
+            onChange={(e)=>{
                 setValue(e.currentTarget.value)
                 }}
             onKeyDown={pressEnter}
@@ -38,7 +39,7 @@ export const Input=(props)=>{
                     </div>
                     
         </div>
-        <PurchaseList/>
+        <PurchaseList addTask={props.addTask}/>
         </div>
     )
 }
