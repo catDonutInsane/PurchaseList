@@ -2,7 +2,6 @@ import React from "react";
 import { useState } from "react";
 import style from "./Input.module.css"
 import {PurchaseList} from "./PurchaseList"
-console.log();
 export const Input=(props)=>{
     const [value, setValue] = useState("")
     const [money, setMoney] = useState(0)
