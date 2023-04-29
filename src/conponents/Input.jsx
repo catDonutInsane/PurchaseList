@@ -23,7 +23,7 @@ export const Input=(props)=>{
     }
     
     return(
-        <div>
+        <div className={style.main}>
         <div className={style.wrapper}>
             <input onChange={(e)=>{
                 setValue(e.currentTarget.value)

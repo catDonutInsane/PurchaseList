@@ -1,6 +1,6 @@
 .inputSum{
     box-sizing: border-box;
-    width: 260px;
+    width: 270px;
     height: 40px;
     border: 3px solid #544e4e;
     padding: 20px;
@@ -8,8 +8,13 @@
     font-size: 22px;
     outline: none;
 }
+.main{
+    width: 100%;
+}
 .wrapper{
+    box-sizing: border-box;
     border-bottom:2px solid #424242;
+    max-width: 1260px;
     width: 100%;
     padding: 10px;
     display: flex;
