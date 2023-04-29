@@ -1,3 +1,6 @@
+*{
+  box-sizing: border-box;
+}
 .wrapper{
   font-family: 'Balsamiq Sans', cursive;
   font-size: 20px;
@@ -8,5 +11,9 @@
   min-height: 720px;
   border: 1px solid teal;
   background-color: blanchedalmond;
+}
+.wrapper p{
+  font-size: 16px;
+  margin: 0 auto;
 }
 
