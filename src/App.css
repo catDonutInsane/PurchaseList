@@ -1,0 +1,12 @@
+.wrapper{
+  font-family: 'Balsamiq Sans', cursive;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 720px;
+  border: 1px solid teal;
+  background-color: blanchedalmond;
+}
+
