@@ -7,11 +7,12 @@ function App() {
   const [list, setList] = useState(JSON.parse(localStorage.getItem('List'))||[])
   
   let addTask = (name, price,amount)=>{
-    if(isNaN(price)) return
-    
-    setList([...list,{name, price:price*amount, amount}])
-    
-     
+    if(isNaN(price)) return    
+    setList([...list,{id:Math.random()*100 ,name, price:price*amount, amount}])
+  }
+  let removeTask = (id)=>{
+    let newList = list.filter(item=>item.id!==id)
+    setList(newList)
   }
   useEffect(()=>{
     localStorage.setItem("List",JSON.stringify(list))
@@ -25,7 +26,7 @@ function App() {
       <p>Укажите сумму,которую готовы потратить </p>
       <Input addTask={addTask}  totalPrice={totalPrice}/>
       {list.map( item =>{
-    return <ListItem item={item}/>
+    return <ListItem item={item} removeTask={removeTask}/>
   })}
     </div>
   );

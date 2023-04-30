@@ -10,7 +10,7 @@ export const ListItem =(props)=>{
             <div>
             {props.item.price+" / "+ props.item.amount+"шт."}
             </div>
-            
+            <button onClick={()=>props.removeTask(props.item.id)}>dfd</button>
         </div>
     )
 }

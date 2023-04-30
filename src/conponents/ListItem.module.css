@@ -2,10 +2,14 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     border: 2px solid #424242;
     margin-bottom: 5px;
     margin-top: 5px;
     padding: 3px;
     border-radius: 4px;
+}
+.wrapper button{
+    width: 40px;
+    height: 40px;
 }
