@@ -25,6 +25,8 @@ export const Input=(props)=>{
     return(
         <div className={style.main}>
         <div className={style.wrapper}>
+
+            <div className={style.inpbnt}>
             <input 
             onChange={(e)=>{
                 setValue(e.currentTarget.value)
@@ -34,6 +36,9 @@ export const Input=(props)=>{
                     className={style.inputSum} 
                     type="text" 
                     placeholder="введите сумму"></input>
+                <button>OK</button>
+            </div>
+
                     <div>
                         <h1>вы готовы проебать: {isNaN(value)?"Введите численное значение":props.totalPrice?money-props.totalPrice:money} рублей</h1>
                     </div>
