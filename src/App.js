@@ -14,7 +14,7 @@ function App() {
                 console.log(totalPrice);
   return (
     <div className='wrapper'>
-      <p>Укажите сумму,которую готовы проебать </p>
+      <p>Укажите сумму,которую готовы потратить </p>
       <Input addTask={addTask} list={list} totalPrice={totalPrice}/>
       {list.map( item =>{
     return <ListItem item={item}/>

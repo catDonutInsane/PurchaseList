@@ -43,7 +43,7 @@ export const Input = (props) => {
 
         <div>
           <h1>
-            вы готовы проебать:{" "}
+            вы готовы потратить:{" "}
             {isNaN(value)
               ? "Введите численное значение"
               : props.totalPrice
