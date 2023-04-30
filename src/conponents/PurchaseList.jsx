@@ -15,15 +15,13 @@ export const PurchaseList = (props) =>{
                 
             </div>
             <button onClick={()=>{
-                if(!price){ return}
+                if(!price||!name){ return}
                 else{
                     props.addTask(name, price,amount)
-                        
                         setName("")
                         setPrice("")
-                }
-                
-                        
+                        setAmount("")
+                }     
                 }}>Добавить</button>
         </div>
     )
