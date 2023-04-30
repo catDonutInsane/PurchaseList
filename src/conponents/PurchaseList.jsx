@@ -20,7 +20,7 @@ export const PurchaseList = (props) =>{
                     props.addTask(name, price,amount)
                         setName("")
                         setPrice("")
-                        setAmount("")
+                        setAmount(1)
                 }     
                 }}>Добавить</button>
         </div>
