@@ -5,18 +5,20 @@ import {PurchaseList} from "./PurchaseList"
 export const Input=(props)=>{
     const [value, setValue] = useState("")
     const [money, setMoney] = useState(0)
+    let clickBtn =(e)=>{
+        if(isNaN(value)|| value===""){
+            setValue(value)
+            setMoney("Введите число")
+            e.currentTarget.value = ""
+            
+        }else{
+            setMoney(value)
+            e.currentTarget.value = ""
+        }
+    }
     const pressEnter=(e)=>{
         if(e.key==="Enter"){
-            if(isNaN(value)|| value===""){
-                setValue(value)
-                setMoney("Введите число")
-                e.currentTarget.value = ""
-                
-            }else{
-                setMoney(value)
-            console.log(money);
-            e.currentTarget.value = ""
-            }
+            clickBtn(e)
             
           
         }
@@ -36,7 +38,7 @@ export const Input=(props)=>{
                     className={style.inputSum} 
                     type="text" 
                     placeholder="введите сумму"></input>
-                <button>OK</button>
+                <button onClick={clickBtn}><span>ok</span></button>
             </div>
 
                     <div>
