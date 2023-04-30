@@ -18,6 +18,9 @@
     margin-right: 0;
 }
  button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 5px;
     border: none;
     width: 95px;
