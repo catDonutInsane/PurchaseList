@@ -20,8 +20,11 @@
  button{
     border-radius: 5px;
     border: none;
-    width: 70px;
+    width: 95px;
     height: 40px;
+    background-color: black;
+    color: aliceblue;
+    font-size: 18px;
 }
 .mainWrap{
     display: flex;
