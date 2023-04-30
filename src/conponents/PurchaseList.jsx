@@ -8,7 +8,7 @@ export const PurchaseList = (props) =>{
     return(
         <div>
             <div className={style.addPurchase}>
-                <input onChange={(e)=>setName(e.currentTarget.value)} value={name} placeholder="Наименование"></input>
+                <input onChange={(e)=>setName(e.currentTarget.value)} value={name} placeholder="Название"></input>
                 <input onChange={(e)=>setPrice(e.currentTarget.value)} value={price} placeholder="Цена"></input>
                 <button onClick={()=>{props.addTask(name, price)
                         setName("")
