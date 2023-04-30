@@ -5,9 +5,9 @@ import {ListItem} from "./conponents/ListItem"
 
 function App() {
   const [list, setList] = useState([])
-  let addTask = (name, price)=>{
+  let addTask = (name, price,amount)=>{
     if(isNaN(price)) return
-    setList([...list,{name, price}])
+    setList([...list,{name, price:price*amount}])
   }
   let totalPrice = list.map(i=>i.price)
                 .reduce((prev,next)=>+prev+ +next,0)
