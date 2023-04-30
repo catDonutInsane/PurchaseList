@@ -8,7 +8,7 @@ export const ListItem =(props)=>{
             {props.item.name}
             </div>
             <div>
-            {props.item.price}
+            {props.item.price+" / "+ props.item.amount+"шт."}
             </div>
             
         </div>

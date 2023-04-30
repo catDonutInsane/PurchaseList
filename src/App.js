@@ -7,7 +7,7 @@ function App() {
   const [list, setList] = useState([])
   let addTask = (name, price,amount)=>{
     if(isNaN(price)) return
-    setList([...list,{name, price:price*amount}])
+    setList([...list,{name, price:price*amount, amount}])
   }
   let totalPrice = list.map(i=>i.price)
                 .reduce((prev,next)=>+prev+ +next,0)
