@@ -11,11 +11,10 @@ export const Input = (props) => {
     if (isNaN(value) || value === "") {
       setValue(value);
       setMoney("Введите число");
-      e.currentTarget.value = "";
     } else {
-      setMoney(value);
-      e.currentTarget.value = "";
+      setMoney(value);      
     }
+    setValue("")
   };
   const pressEnter = (e) => {
     if (e.key === "Enter") {
