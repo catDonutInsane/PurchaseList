@@ -12,7 +12,7 @@ export const PurchaseList = (props) =>{
             <div className={style.addPurchase}>
                 <input onChange={(e)=>setName(e.currentTarget.value)} value={name} placeholder="Название"></input>
                 <input onChange={(e)=>setPrice(e.currentTarget.value)} value={price} placeholder="Цена"></input>
-                <input onChange={(e)=>setAmount(e.currentTarget.value)} value={amount} type="text" />
+                <input onChange={(e)=>setAmount(e.currentTarget.value)} value={amount} placeholder="Кол-во" type="text" />
                 
             </div>
             <button onClick={()=>{
