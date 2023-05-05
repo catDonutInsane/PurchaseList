@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import style from "./PurchaseList.module.css"
+import {ListItem} from "./ListItem"
 
 export const PurchaseList = (props) =>{
     const [name, setName] = useState('')
@@ -17,12 +18,17 @@ export const PurchaseList = (props) =>{
             <button onClick={()=>{
                 if(!price||!name){ return}
                 else{
+
                     props.addTask(name, price,amount)
+                   props.ch(price)
                         setName("")
                         setPrice("")
                         setAmount(1)
                 }     
                 }}>Добавить</button>
+                {props.list.map( item =>{
+    return <ListItem removeCh={props.removeCh} item={item} removeTask={props.removeTask}/>
+  })}
         </div>
     )
 }

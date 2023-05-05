@@ -20,6 +20,10 @@
 .inpbnt{
     display: flex;
 }
+
+.minus{
+    color:red
+}
 .inpbnt button{
     display: flex;
     align-items: center;
@@ -46,8 +50,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 .wrapper h1{
     font-size: 20px;
-    width: 360px;
+    width: 310px;
 }

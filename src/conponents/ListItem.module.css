@@ -15,3 +15,6 @@
     background-color: black;
     color: beige;
 }
+.name{
+    word-break: break-all;
+}

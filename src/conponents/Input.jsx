@@ -1,27 +1,48 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { useState } from "react";
 import style from "./Input.module.css";
 import { PurchaseList } from "./PurchaseList";
 
+
 export const Input = (props) => {
   const [value, setValue] = useState("");
   const [money, setMoney] = useState(0);
+  console.log(props.totalPrice);
   
+  
+  const color = useRef()
+  
+  useEffect(()=>{
+    
+      color.current.style.color=money>=0?"black":"red"
+     
+  },[money])
+
   let clickBtn = (e) => {
     if (isNaN(value) || value === "") {
       setValue(value);
       setMoney("Введите число");
     } else {
-      setMoney(value);      
+
+      setMoney(value);  
+
+         
     }
     setValue("")
+    
   };
+  const ch=(price)=>{
+    setMoney(money-price)
+  }
+  const removeCh = (price)=>{
+    setMoney(money+price)
+  }
   const pressEnter = (e) => {
     if (e.key === "Enter") {
       clickBtn(e);
     }
   };
-
+ 
   return (
     <div className={style.main}>
       <div className={style.wrapper}>
@@ -41,19 +62,20 @@ export const Input = (props) => {
           </button>
         </div>
 
-        <div>
+        <div >
           <h1>
-            вы готовы потратить:{" "}
-            {isNaN(value)
+            вы готовы потратить: {" "} <span ref={color}>{isNaN(value)
               ? "Введите численное значение"
-              : props.totalPrice
-              ? money - props.totalPrice
-              : money}{" "}
-            рублей
+              :money}</span> 
+             {" "}рублей
           </h1>
         </div>
       </div>
-      <PurchaseList addTask={props.addTask} />
+      <PurchaseList removeCh={removeCh} 
+                    removeTask={props.removeTask} 
+                    list={props.list} 
+                    ch={ch}  
+                    addTask={props.addTask} />
     </div>
   );
 };
