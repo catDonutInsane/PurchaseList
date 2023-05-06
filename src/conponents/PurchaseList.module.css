@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Balsamiq Sans';
+  }
 .addPurchase input{
     width: 105px;
     height: 40px;

@@ -3,7 +3,7 @@
 }
 .wrapper{
   position: relative;
-  font-family: 'Balsamiq Sans', cursive;
+  font-family: 'Balsamiq Sans';
   font-size: 20px;
   display: flex;
   flex-direction: column;

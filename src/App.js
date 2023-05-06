@@ -31,7 +31,7 @@ function App() {
     <div className='wrapper'>
       <SlideDown  />
       
-      <p>Укажите сумму,которую готовы потратить </p>
+      <p>Укажите Ваш бюджет </p>
       <Input removeTask={removeTask} addTask={addTask} list={list} totalPrice={totalPrice}/>
       
     </div>

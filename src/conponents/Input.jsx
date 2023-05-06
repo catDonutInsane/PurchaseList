@@ -67,7 +67,7 @@ export const Input = (props) => {
 
         <div >
           <h1>
-            вы готовы потратить: {" "} <span ref={color}>{isNaN(value)
+            Остаток: {" "} <span ref={color}>{isNaN(value)
               ? "Введите численное значение"
               :money}</span> 
              {" "}рублей
