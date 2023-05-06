@@ -20,14 +20,14 @@ export const PurchaseList = (props) =>{
                 else{
                 
                     props.addTask(name, price,amount)
-                   props.ch(price)
+                   props.ch(price,amount)
                         setName("")
                         setPrice("")
                         setAmount(1)
                 }     
                 }}>Добавить</button>
                 {props.list.map( item =>{
-    return <ListItem removeCh={props.removeCh} item={item} removeTask={props.removeTask}/>
+    return <ListItem key={item.id} removeCh={props.removeCh}  item={item} removeTask={props.removeTask}/>
   })}
         </div>
     )

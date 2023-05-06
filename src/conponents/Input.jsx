@@ -34,8 +34,8 @@ export const Input = (props) => {
     setValue("")
     
   };
-  const ch=(price)=>{
-    setMoney(money-price)
+  const ch=(price,amount)=>{
+    setMoney(money-price*amount)
   }
   const removeCh = (price)=>{
     setMoney(money+price)
