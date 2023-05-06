@@ -13,6 +13,7 @@ export const SlideDown=()=>{
         <div className={style.wrapper}>
              <div ref={slDOWN} className={style.slideDown}>
              <button onClick={slideUp}>Скрыть</button>
+             пока здесь ничего нет
              </div>
         <button onClick={slideDown}>Меню</button>
         </div>
