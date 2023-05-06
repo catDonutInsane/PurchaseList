@@ -18,7 +18,7 @@ export const PurchaseList = (props) =>{
             <button onClick={()=>{
                 if(!price||!name){ return}
                 else{
-
+                
                     props.addTask(name, price,amount)
                    props.ch(price)
                         setName("")

@@ -6,10 +6,13 @@ import { PurchaseList } from "./PurchaseList";
 
 export const Input = (props) => {
   const [value, setValue] = useState("");
-  const [money, setMoney] = useState(0);
+  const [money, setMoney] = useState(JSON.parse(localStorage.getItem('Money'))||0);
   console.log(props.totalPrice);
   
-  
+  useEffect(()=>{
+    localStorage.setItem("Money",JSON.stringify(money))
+    
+  },[money])
   const color = useRef()
   
   useEffect(()=>{

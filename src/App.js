@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import {Input} from "./conponents/Input"
+import {SlideDown} from "./conponents/SlideDown/SlideDown"
 
 
 function App() {
@@ -28,6 +29,8 @@ function App() {
   
   return (
     <div className='wrapper'>
+      <SlideDown  />
+      
       <p>Укажите сумму,которую готовы потратить </p>
       <Input removeTask={removeTask} addTask={addTask} list={list} totalPrice={totalPrice}/>
       
