@@ -14,6 +14,7 @@ export  const SlideDown=()=>{
       delay+=0.3
       count+=80
     }
+    
   }
     let slDOWN = useRef()
     const slideDown=()=>{
