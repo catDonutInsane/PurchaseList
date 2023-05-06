@@ -30,7 +30,7 @@ export  const SlideDown=()=>{
              
              <button onClick={
                           slideUp}>Скрыть</button>
-             пока здесь ничего нет
+             
              <div ref={mainBl}>
              <div  className={style.blocks} >HUI</div>
              <div  className={style.blocks} >PISKA</div>
