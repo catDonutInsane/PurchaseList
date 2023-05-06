@@ -7,7 +7,7 @@ export const SlideDown=()=>{
         slDOWN.current.style.top=0
       }
       const slideUp=()=>{
-        slDOWN.current.style.top=-500+"px"
+        slDOWN.current.style.top=-1000+"px"
       }
     return(
         <div className={style.wrapper}>
