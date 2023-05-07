@@ -1,9 +1,13 @@
 import React,{useRef,  useReducer} from "react";
 import style from "./SlideDown.module.css"
 import {reducer} from "../../reducers/reducer"
-
+<script src="http://localhost:8097"></script>
 
 export  const SlideDown=()=>{
+ 
+
+
+
   const [state, dispatch] = useReducer(reducer, {
     count: 0,
   });
@@ -42,9 +46,7 @@ export  const SlideDown=()=>{
                           slideUp}>Скрыть</button>
              
              <div ref={mainBl}>
-             {/* <div  className={style.blocks} >HUI</div>
-             <div  className={style.blocks} >PISKA</div>
-             <div  className={style.blocks} >GOVNO</div> */}
+             
              <button className={style.blocks} onClick={() => dispatch({ type: "plus" })}>INCREMENT</button>
       <button className={style.blocks} onClick={() => dispatch({ type: "minus" })}>DECREMENT</button>
              </div>
@@ -55,4 +57,5 @@ export  const SlideDown=()=>{
         </div>
        
     )
+
 }

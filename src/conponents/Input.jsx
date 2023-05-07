@@ -38,7 +38,7 @@ export const Input = (props) => {
     setMoney(money-price*amount)
   }
   const removeCh = (price)=>{
-    setMoney(money+price)
+    setMoney(+money+ +price)
   }
   const pressEnter = (e) => {
     if (e.key === "Enter") {
