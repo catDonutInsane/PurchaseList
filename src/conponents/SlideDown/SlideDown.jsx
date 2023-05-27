@@ -1,4 +1,4 @@
-import React,{useRef,  useReducer, useState} from "react";
+import React,{useRef,  useReducer} from "react";
 import style from "./SlideDown.module.css"
 import {reducer} from "../../reducers/reducer"
 import useSound from 'use-sound';
