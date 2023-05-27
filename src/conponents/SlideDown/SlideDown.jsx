@@ -3,10 +3,11 @@ import style from "./SlideDown.module.css"
 import {reducer} from "../../reducers/reducer"
 import useSound from 'use-sound';
 import boopSfx from './d86cf5ae179617e.mp3';
+import t from './t.m4a'
 
 
 export  const SlideDown=()=>{
-  const [play] = useSound(boopSfx)
+  const [play] = useSound(t)
   const [state, dispatch] = useReducer(reducer, {
     count: 0,
   });
@@ -43,7 +44,7 @@ export  const SlideDown=()=>{
              
              <button onClick={()=>{
                           play()
-                          slideUp()}}>Скрыть</button>
+                          setTimeout(()=>slideUp(),500) }}>Скрыть</button>
              
              <div ref={mainBl}>
              
