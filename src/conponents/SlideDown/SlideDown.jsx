@@ -1,13 +1,12 @@
-import React,{useRef,  useReducer} from "react";
+import React,{useRef,  useReducer, useState} from "react";
 import style from "./SlideDown.module.css"
 import {reducer} from "../../reducers/reducer"
+import useSound from 'use-sound';
+import boopSfx from './d86cf5ae179617e.mp3';
 <script src="http://localhost:8097"></script>
 
 export  const SlideDown=()=>{
- 
-
-
-
+  const [play] = useSound(boopSfx)
   const [state, dispatch] = useReducer(reducer, {
     count: 0,
   });
@@ -42,8 +41,9 @@ export  const SlideDown=()=>{
           
              <div ref={slDOWN} className={style.slideDown}>
              
-             <button onClick={
-                          slideUp}>Скрыть</button>
+             <button onClick={()=>{
+                          play()
+                          slideUp()}}>Скрыть</button>
              
              <div ref={mainBl}>
              
@@ -53,7 +53,9 @@ export  const SlideDown=()=>{
              <h1>count: {count}</h1>
       
              </div>
-        <button onClick={slideDown}>Меню</button>
+        <button onClick={()=>{
+                            slideDown()
+                             }}>Меню</button>
         </div>
        
     )
