@@ -3,7 +3,7 @@ import style from "./SlideDown.module.css"
 import {reducer} from "../../reducers/reducer"
 import useSound from 'use-sound';
 import boopSfx from './d86cf5ae179617e.mp3';
-<script src="http://localhost:8097"></script>
+
 
 export  const SlideDown=()=>{
   const [play] = useSound(boopSfx)
